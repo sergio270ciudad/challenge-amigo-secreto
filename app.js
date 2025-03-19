@@ -24,3 +24,17 @@ function agregarAmigo() {
     // Actualizar la lista en el HTML
     actualizarLista();
 }
+
+function actualizarLista() {
+    const listaAmigos = document.getElementById('listaAmigos');
+
+    // Limpiar la lista antes de actualizarla
+    listaAmigos.innerHTML = "";
+
+    // Agregar cada amigo como un nuevo elemento de lista
+    amigos.forEach(amigo => {
+        const li = document.createElement('li');
+        li.textContent = amigo;
+        listaAmigos.appendChild(li);
+    });
+}
